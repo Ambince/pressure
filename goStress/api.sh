@@ -11,10 +11,31 @@ api_array[7]=https://demo.dagen.io/api/queryBlindBox?page=0&onSale=false
 api_array[8]=https://demo.dagen.io/api/verifyForBlindBox
 
 
+c=$1
+n=$2
+output_name="dagen-api.txt"
+
+if [ ! -n "$n" ]; then
+   n=1
+else
+   echo “每个线程执行”$n"次"
+fi
+
+
+
+if [ ! -n "$c" ]; then
+    c=1000
+    rm -rf dagen-api.txt
+else
+    rm -rf dagen-api$c.txt
+    output_name=dagen-api-$c.txt
+    echo 共有$c个线程执行
+fi
+
 
 for var in ${api_array[@]};
 do
 
-./go-stress-testing-linux -c 1000  -n 1 -u $var 2>&1 |tee dagen-api.txt
+./go-stress-testing-linux -c $c  -n $n -u $var 2>&1 |tee -a $output_name
 done
 

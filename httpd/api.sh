@@ -13,9 +13,33 @@ api_array[8]=https://demo.dagen.io/api/verifyForBlindBox
 
 rm -rf dagen-api.txt
 
+n=$1
+c=$2
+output_name="dagen-api.txt"
+
+if [ ! -n "$n" ]; then
+   n=1000
+else
+   echo “每个线程执行”$n"次"
+fi
+
+
+
+if [ ! -n "$c" ]; then
+    c=1000
+    rm -rf dagen-api.txt
+else
+    rm -rf dagen-api-$c.txt
+    output_name=dagen-api-$c.txt
+    echo “共有”$c“个线程执行”
+fi
+
+
+
+
 for var in ${api_array[@]};
 do
-	ab -n 1000 -c 1000  $var  >> dagen-api.txt	
+	ab -n $n -c $c  $var  >> $output_name	
 
 done
 

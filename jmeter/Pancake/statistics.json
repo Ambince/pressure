@@ -1,0 +1,34 @@
+{
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 1000,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 22093.441999999963,
+    "medianResTime" : 22105.0,
+    "minResTime" : 19728.0,
+    "maxResTime" : 23929.0,
+    "pct1ResTime" : 23465.8,
+    "pct2ResTime" : 23696.75,
+    "pct3ResTime" : 23847.99,
+    "throughput" : 41.75888420261411,
+    "receivedKBytesPerSec" : 378.76612936902325,
+    "sentKBytesPerSec" : 4.934399402847956
+  },
+  "https://pancakeswap.finance/" : {
+    "transaction" : "https://pancakeswap.finance/",
+    "sampleCount" : 1000,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 22093.441999999963,
+    "medianResTime" : 22105.0,
+    "minResTime" : 19728.0,
+    "maxResTime" : 23929.0,
+    "pct1ResTime" : 23465.8,
+    "pct2ResTime" : 23696.75,
+    "pct3ResTime" : 23847.99,
+    "throughput" : 41.75888420261411,
+    "receivedKBytesPerSec" : 378.76612936902325,
+    "sentKBytesPerSec" : 4.934399402847956
+  }
+}
